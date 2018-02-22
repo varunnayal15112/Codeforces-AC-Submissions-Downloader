@@ -78,9 +78,10 @@ class CodeforcesSpider(scrapy.Spider):
         for data in self.user_submissions_data:
             if str(submissionId) == str(data[0]):
                 file_name=str(data[1])+str(data[2])+".txt"
-                if(os.path.isfile("/home/vicky/Desktop/Desktop_mera/Codeforces_submission_Automation_with_Github/"+file_name)==False):
+                #if(os.path.isfile("/home/vicky/Desktop/Codeforces/AC_SUBMISSIONS/"+file_name)==False):
+                if(os.path.isfile("/home/vicky/Desktop/Desktop_mera/Codeforces_submission_Automation_with_Github/Codeforces/AC_SUBMISSIONS/"+file_name)==False):
                     print("file created")
-                    with open(file_name, 'a') as f:
+                    with open("/home/vicky/Desktop/Desktop_mera/Codeforces_submission_Automation_with_Github/Codeforces/AC_SUBMISSIONS/"+file_name,'a') as f:
                         header = "/*\n\tSubmissionId\t:\t"+str(data[0])+"\n\tContestId\t:\t"+str(data[1])+"\n\tIndex\t:\t"+str(data[2])+"\n\tProblemName\t:\t"+str(data[3])+"\n\tProblemTags\t:\t"+str(data[4])+"\n\tProgrammingLanguage\t:\t"+str(data[5])+"\n\tVerdict\t:\t"+str(data[6])+"\n*/\n\n"
                         f.write(header)
                         f.write(code)
