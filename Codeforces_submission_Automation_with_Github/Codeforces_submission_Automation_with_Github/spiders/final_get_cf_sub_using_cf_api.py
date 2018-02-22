@@ -78,7 +78,6 @@ class CodeforcesSpider(scrapy.Spider):
         for data in self.user_submissions_data:
             if str(submissionId) == str(data[0]):
                 file_name=str(data[1])+str(data[2])+".txt"
-                #if(os.path.isfile("/home/vicky/Desktop/Codeforces/AC_SUBMISSIONS/"+file_name)==False):
                 if(os.path.isfile("/home/vicky/Desktop/Desktop_mera/Codeforces_submission_Automation_with_Github/Codeforces/AC_SUBMISSIONS/"+file_name)==False):
                     print("file created")
                     with open("/home/vicky/Desktop/Desktop_mera/Codeforces_submission_Automation_with_Github/Codeforces/AC_SUBMISSIONS/"+file_name,'a') as f:
