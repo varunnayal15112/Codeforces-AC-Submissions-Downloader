@@ -18,7 +18,7 @@ class CodeforcesSpider(scrapy.Spider):
     total_count=0
     
     def start_requests(self):
-        username = self.category
+        username = input("Enter a CF User Handle : ")
         response = requests.get("http://codeforces.com/api/user.info?handles=" + username)
         user_info = response.json()
         print (user_info['status'])
