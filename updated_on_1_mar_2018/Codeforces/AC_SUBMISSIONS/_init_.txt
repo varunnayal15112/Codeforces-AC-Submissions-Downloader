@@ -1,0 +1,3 @@
+This package will contain all the programming codes/files of the submissions downloaded by the scrapy spider from the codeforces platform of the given user.
+
+
