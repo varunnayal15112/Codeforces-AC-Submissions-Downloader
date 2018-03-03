@@ -90,8 +90,10 @@ class CodeforcesSpider(scrapy.Spider):
                 else:
                     extension = ".txt"
                 file_name=str(data[1])+str(data[2])+"-"+data[3].replace(' ','')+extension
+                #change here the path of finding the submission file according to the directory where you want to save your files
                 if(os.path.isfile("/home/vicky/Desktop/Desktop_mera/Flask Tutorial/Codeforces/AC_SUBMISSIONS/"+file_name)==False):
                     print("file created")
+                    #change here the path of finding the submission file according to the directory where you want to save your files
                     with open("/home/vicky/Desktop/Desktop_mera/Flask Tutorial/Codeforces/AC_SUBMISSIONS/"+file_name,'a') as f:
                         header = "/*\n\tSubmissionId\t:\t"+str(data[0])+"\n\tContestId\t:\t"+str(data[1])+"\n\tIndex\t:\t"+str(data[2])+"\n\tProblemName\t:\t"+str(data[3])+"\n\tProblemTags\t:\t"+str(data[4])+"\n\tProgrammingLanguage\t:\t"+str(data[5])+"\n\tVerdict\t:\t"+str(data[6])+"\n*/\n\n"
                         f.write(header)
