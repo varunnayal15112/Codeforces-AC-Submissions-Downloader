@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+body {
+    background-color: black;
+    color: white;
+}
+
+#heading {
+	color: white;
+	margin-left: 560px;
+	font-size: 40px;	
+}
+#symbol {
+	position: absolute;
+	top: 1%;
+	left: 39%;
+	border: 1px solid white;
+	position: absolute;
+	height: 7.5%;
+	width: 22%;
+	/*margin-top: 20px;
+	margin-left:500px;
+	padding: 2px;*/
+	
+}
+._search_handle_ form {
+	background: #111;
+	background: linear-gradient(#1b1b1b, #111);
+	border: 1px solid #000;
+	border-radius: 5px;
+	box-shadow: inset 0 0 0 1px #272727;
+	display: inline-block;
+	font-size: 0px;
+	margin-left: 860px;
+	padding: 20px;
+	position: relative;
+	z-index: 1;
+}
+
+._search_handle_ div {
+	color: white;
+	margin-left: 960px;
+	font-size: 20px;
+}
+
+._about_ div  {
+    background-color: black;
+    width: 500px;
+    border: 1px solid white;
+    margin-top: -55px;
+    margin-left: 1px;
+    padding: 5px;
+    
+}
+
+._about_ img {
+    margin-left: 175px;    	
+}
+
+._social_presence_ div {
+    background-color: grey;
+    color: black; 
+    width: 110px; 
+    border: 1px solid white;
+    margin-top: 5px;
+    margin-left: 600px;
+    padding: 1px;
+	
+}
+
+</style>
+</head>
+<body>
+	<div id="symbol">
+	<img src="https://www.stopstalk.com/stopstalk/static/images/codeforces_logo.png?_rev=20180210214914" height="50" width="50"/>
+	</div>
+	<div id="heading">
+	GET_CF_AC</div>
+	<section class="_search_handle_">
+		<form id="submit_form" action="http://localhost:5000/result" method="post">		    
+			<input type="text" id="cf_handle" placeholder="      __enter your cf handle__" align= "top" name="cf_handle">		    	
+		       <input type="submit" value="Submit"/>  
+		</form>
+		<div id="loading">
+		<img src="https://unilever.taleo.net/careersection/theme/722682/1518687603000/en/theme/images/loader.gif" style="display: none;" id="loading-image" height="100" width="100" alt="Loading..."/>
+		</div>
+		<script>
+			$('#submit_form').submit(function() {
+    			$('#loading-image').show();
+			});
+		</script>  
+		    	
+	</section>
+	
+	<section class="_about_">
+		<div>
+			<img src="https://scontent-bom1-1.xx.fbcdn.net/v/t1.0-9/28277418_1406600636117205_4312407747413648358_n.jpg?oh=0b8777864563ca7ad4213a3dc8580bdf&oe=5B0850EF" width="150" height="150">
+			<p align="center">Varun Nayal</p>
+			<p>I am a third year student pursuing Bachelor of Engineering [B.E.] in CSE from Army Institute of Technology Pune, India.</p>
+			<p>Almost all the IT professionals and students loves Competitive Programming. Codeforces is one such platform where coders from various nations involved in various activities whether participating in any contest/round, practice problem solving or contributing anything to the CF community. Generally coders face difficulty in maintaining all their submissions to the problems on these platforms. This is where the idea pop into my mind about developing GET_CF_AC, a tool to download all ACCEPTED[AC] submissions to the problems of any existing CodeForces[CF] user. Try this out by giving a valid CF user handle and get all your AC submissions in a folder. The files will be downloaded as per their programming language(cpp,py,java or txt) according to the ContestId+Index+ProblemName !</p>			
+		</div>
+	</section>
+	<section class="_social_presence_">
+	      <div>
+	      <a href="mailto:varunnayal_15112@aitpune.edu.in"><i class="fa fa-envelope" style="font-size:36px;color:black"></i></a>
+	      <a href="https://www.facebook.com/varun.nayal.18"><i class="fa fa-facebook-official" style="font-size:36px;color:black"></i></a>      	
+	      <a href="https://github.com/varunnayal15112"><i class="fa fa-github" style="font-size:36px;color:black"></i></a>
+	      </div>
+	</section>
+
+</body>
+</html>
